@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bkgwe3hwre3tv"]
+
+[ext_resource type="Texture2D" uid="uid://rt2bqj41ph8g" path="res://assets/background/Layer_0010_1.png" id="1_hv63x"]
+[ext_resource type="Script" uid="uid://dbso7hh16e2xm" path="res://background_paralax.gd" id="1_ljh82"]
+[ext_resource type="Texture2D" uid="uid://bidd27jxck7jp" path="res://assets/background/Layer_0009_2.png" id="2_ljh82"]
+[ext_resource type="Texture2D" uid="uid://y21fduaelpb0" path="res://assets/background/Layer_0008_3.png" id="3_nvqu6"]
+[ext_resource type="Texture2D" uid="uid://dqwonmm6u656d" path="res://assets/background/Layer_0003_6.png" id="4_c70m7"]
+
+[node name="BackgroundParalax" type="ParallaxBackground" unique_id=1708272533]
+script = ExtResource("1_ljh82")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1503908835]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Layer00101" type="Sprite2D" parent="ParallaxLayer" unique_id=1629109926]
+position = Vector2(576.00006, 324.5)
+scale = Vector2(1.2413794, 0.815889)
+texture = ExtResource("1_hv63x")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=1251109509]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Layer00092" type="Sprite2D" parent="ParallaxLayer2" unique_id=1084535895]
+position = Vector2(575.3549, 184.37502)
+scale = Vector2(1.2399892, 1.2046028)
+texture = ExtResource("2_ljh82")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." unique_id=721355517]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Layer00083" type="Sprite2D" parent="ParallaxLayer3" unique_id=1188654068]
+position = Vector2(574, 86.99999)
+scale = Vector2(1.24401, 1.256305)
+texture = ExtResource("3_nvqu6")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." unique_id=82718242]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Layer00036" type="Sprite2D" parent="ParallaxLayer4" unique_id=408494498]
+position = Vector2(575, 91.99999)
+scale = Vector2(1.2386507, 1.2447983)
+texture = ExtResource("4_c70m7")

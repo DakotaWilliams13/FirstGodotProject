@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://g1kfj7b1c5qd"]
+
+[ext_resource type="Script" uid="uid://bux4nuc5j5hpy" path="res://menu.gd" id="1_lti8b"]
+
+[sub_resource type="SystemFont" id="SystemFont_vsb4k"]
+
+[node name="Menu" type="Node2D" unique_id=1301958002]
+script = ExtResource("1_lti8b")
+
+[node name="PlayButton" type="Button" parent="." unique_id=1485337292]
+offset_left = 391.0
+offset_top = 200.0
+offset_right = 761.0
+offset_bottom = 255.0
+theme_override_fonts/font = SubResource("SystemFont_vsb4k")
+theme_override_font_sizes/font_size = 36
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1160790847]
+offset_left = 391.0
+offset_top = 363.0
+offset_right = 761.0
+offset_bottom = 421.0
+theme_override_fonts/font = SubResource("SystemFont_vsb4k")
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
