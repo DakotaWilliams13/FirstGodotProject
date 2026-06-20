@@ -268,7 +268,7 @@ shape = SubResource("CircleShape2D_36fdh")
 [node name="Death" type="Area2D" parent="." unique_id=1839344813]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=435692726]
-position = Vector2(-2, -15)
+position = Vector2(-1, -14)
 shape = SubResource("RectangleShape2D_oh8ye")
 
 [node name="Death2" type="Area2D" parent="." unique_id=2048964333]

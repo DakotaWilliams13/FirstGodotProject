@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dlwq45cmmdb60"]
 
+[ext_resource type="Texture2D" uid="uid://cqtw2ebwakjc2" path="res://assets/characters/Attack-01-Sheet.png" id="1_g6k8r"]
+[ext_resource type="Texture2D" uid="uid://b542opn0ckub3" path="res://assets/characters/Dead-Sheet.png" id="2_boad6"]
 [ext_resource type="Texture2D" uid="uid://s8deytkikbsm" path="res://assets/characters/Idle-Sheet.png" id="2_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://dkdg15jvpmmci" path="res://assets/characters/Jump-Start-Sheet.png" id="2_yw30f"]
 [ext_resource type="Texture2D" uid="uid://bsexugianutf4" path="res://assets/characters/Jump-End-Sheet.png" id="3_qjkh3"]
@@ -15,6 +17,7 @@ const JUMP_VELOCITY = -400.0
 
 @onready var anim = $AnimatedSprite2D
 var heath = 100
+var gold = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -28,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	var direction := Input.get_axis(\"left\", \"right\")
 	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
@@ -51,6 +54,70 @@ func _physics_process(delta: float) -> void:
 		anim.play(\"Fall\")
 	move_and_slide()
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knn7v"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pqkx"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw77l"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rptt4"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7pn3"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(384, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8hi5"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(480, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uvqg"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(576, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s1yo"]
+atlas = ExtResource("1_g6k8r")
+region = Rect2(672, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ejfk"]
+atlas = ExtResource("2_boad6")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd2rm"]
+atlas = ExtResource("2_boad6")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q28gw"]
+atlas = ExtResource("2_boad6")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge24q"]
+atlas = ExtResource("2_boad6")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnw6m"]
+atlas = ExtResource("2_boad6")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1so5t"]
+atlas = ExtResource("2_boad6")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55jnj"]
+atlas = ExtResource("2_boad6")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx5ib"]
+atlas = ExtResource("2_boad6")
+region = Rect2(560, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kb6p2"]
 atlas = ExtResource("3_qjkh3")
@@ -130,6 +197,64 @@ region = Rect2(560, 0, 80, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yw30f"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knn7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw77l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rptt4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7pn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8hi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uvqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1s1yo")
+}],
+"loop": 0,
+"name": &"Attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ejfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd2rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q28gw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge24q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnw6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1so5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55jnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx5ib")
+}],
+"loop": 0,
+"name": &"Dead",
+"speed": 13.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kb6p2")
@@ -221,14 +346,14 @@ script = SubResource("GDScript_36fdh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=575018013]
 position = Vector2(1, -1)
 sprite_frames = SubResource("SpriteFrames_yw30f")
-animation = &"Fall"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.6412718
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127498654]
 shape = SubResource("CapsuleShape2D_qjkh3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1320165293]
+offset = Vector2(0, -30.78)
 zoom = Vector2(2.4, 2.4)
 process_callback = 0
 limit_left = 0
