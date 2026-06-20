@@ -12,8 +12,9 @@ script/source = "extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-@onready var anim = $AnimatedSprite2D
 
+@onready var anim = $AnimatedSprite2D
+var heath = 100
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -41,6 +42,10 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 	elif direction == 1:
 		$AnimatedSprite2D.flip_h = false
+		
+	if heath <= 0:
+		queue_free()
+		get_tree().change_scene_to_file(\"res://menu.tscn\")
 		
 	if velocity.y > 0:
 		anim.play(\"Fall\")
