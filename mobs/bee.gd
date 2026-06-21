@@ -7,8 +7,8 @@ var alive = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 	#var player = get_tree().current_scene.get_node("Player")
 	var player = $"../../Player/Player"
 	var direction = (player.position - self.position).normalized()
@@ -54,7 +54,5 @@ func death():
 	alive = false
 	velocity.x = 0
 	anim.play("Death")
-	#$CollisionShape2D.set_deferred("disabled", true)
-	#set_collision_mask_value(3, false)
 	await anim.animation_finished
 	queue_free()
