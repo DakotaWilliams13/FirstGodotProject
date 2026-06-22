@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b542opn0ckub3"
-path="res://.godot/imported/Dead-Sheet.png-d7f0a566b783bd9daff48e255230dc29.ctex"
+uid="uid://dbbk02bgu1mfp"
+path="res://.godot/imported/RUN.png-01215e1ccb5505337afa87875fa81ed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Dead-Sheet.png"
-dest_files=["res://.godot/imported/Dead-Sheet.png-d7f0a566b783bd9daff48e255230dc29.ctex"]
+source_file="res://assets/characters/Knight/RUN.png"
+dest_files=["res://.godot/imported/RUN.png-01215e1ccb5505337afa87875fa81ed9.ctex"]
 
 [params]
 

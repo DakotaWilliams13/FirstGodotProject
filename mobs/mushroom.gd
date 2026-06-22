@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	#var player = get_tree().current_scene.get_node("Player")
-	var player = $"../../Player/Player"
+	var player = $"../../Player/Player2"
 	var direction = (player.position - self.position).normalized()
 													#Нормализация в Godot — это операция, при которой вектор приводится к длине 1, 
 													#сохраняя при этом его направление. Это позволяет представить вектор только 
@@ -30,24 +30,24 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_detector_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player2":
 		chase = true
 
 
 func _on_detector_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player2":
 		chase = false
 
 
 func _on_death_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player2":
 		body.velocity.y -= 200
 		death()
 
 func _on_death_2_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player2":
 		if alive == true:
-			body.heath -= 40
+			body.health -= 40
 		death()
 
 func death():

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dbso7hh16e2xm" path="res://background_paralax.gd" id="1_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://rt2bqj41ph8g" path="res://assets/background/Layer_0010_1.png" id="1_rka8t"]
 [ext_resource type="Texture2D" uid="uid://bidd27jxck7jp" path="res://assets/background/Layer_0009_2.png" id="2_5hph3"]
-[ext_resource type="PackedScene" uid="uid://dlwq45cmmdb60" path="res://player/player.tscn" id="2_hn12h"]
 [ext_resource type="Texture2D" uid="uid://y21fduaelpb0" path="res://assets/background/Layer_0008_3.png" id="3_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://dqwonmm6u656d" path="res://assets/background/Layer_0003_6.png" id="4_bjebc"]
 [ext_resource type="Texture2D" uid="uid://6bgpx4ykpe3g" path="res://assets/background/Layer_0000_9.png" id="5_1pe0h"]
@@ -16,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dws4njf8dve3l" path="res://assets/Interior-01.png" id="11_gjkv5"]
 [ext_resource type="Texture2D" uid="uid://blxso8ahe1e4m" path="res://assets/Props-Rocks.png" id="12_00ld1"]
 [ext_resource type="Texture2D" uid="uid://dbgpu0ap8h01v" path="res://assets/Tree-Assets.png" id="13_3qmij"]
+[ext_resource type="PackedScene" uid="uid://dvubxlq821kyt" path="res://player2/player_2.tscn" id="14_65or1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1pe0h"]
 texture = ExtResource("6_5hph3")
@@ -3805,7 +3805,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	text = \"HP: \" + str($\"../../Player/Player\".heath)
+	text = \"HP: \" + str($\"../../Player/Player2\".health)
 "
 
 [sub_resource type="GDScript" id="GDScript_36fdh"]
@@ -3819,7 +3819,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	text = \"GOLD: \" + str($\"../../Player/Player\".gold)
+	text = \"GOLD: \" + str($\"../../Player/Player2\".gold)
 "
 
 [sub_resource type="GDScript" id="GDScript_1ve63"]
@@ -3912,8 +3912,8 @@ tile_set = SubResource("TileSet_sof0w")
 
 [node name="Player" type="Node2D" parent="." unique_id=1249033577]
 
-[node name="Player" parent="Player" unique_id=233506216 instance=ExtResource("2_hn12h")]
-position = Vector2(129, 501)
+[node name="Player2" parent="Player" unique_id=926259390 instance=ExtResource("14_65or1")]
+position = Vector2(161, 475)
 
 [node name="Mobs" type="Node2D" parent="." unique_id=480052483]
 

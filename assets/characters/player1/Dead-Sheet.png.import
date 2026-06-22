@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ud4edyigjb1g"
-path="res://.godot/imported/Run-Sheet.png-1e6a42753efd69d92a5512b75f78896e.ctex"
+uid="uid://b542opn0ckub3"
+path="res://.godot/imported/Dead-Sheet.png-a1819df78368bc356b8686b272ac9619.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Run-Sheet.png"
-dest_files=["res://.godot/imported/Run-Sheet.png-1e6a42753efd69d92a5512b75f78896e.ctex"]
+source_file="res://assets/characters/player1/Dead-Sheet.png"
+dest_files=["res://.godot/imported/Dead-Sheet.png-a1819df78368bc356b8686b272ac9619.ctex"]
 
 [params]
 
